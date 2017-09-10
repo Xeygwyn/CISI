@@ -132,23 +132,7 @@ public class MainWindow {
             public void itemStateChanged(ItemEvent e) {
 
              
-                if (ammo.getSelectedItem() == ".45-70 Government") {
-                    if (animal.getSelectedItem() == "Bison" ||
-                        animal.getSelectedItem() == "Black Bear" ||
-                        animal.getSelectedItem() == "Brown Bear" ||
-                        animal.getSelectedItem() == "Feral Hog" ||
-                        animal.getSelectedItem() == "Grizzly Bear" ||
-                        animal.getSelectedItem() == "Moose" ||
-                        animal.getSelectedItem() == "Polar Bear" ||
-                        animal.getSelectedItem() == "Red Deer" ||
-                        animal.getSelectedItem() == "Rocky Mountain Elk" ||
-                        animal.getSelectedItem() == "Roosevelt Elk" ||
-                        animal.getSelectedItem() == "Wild Boar") {
-                        txtrYesNo.setText("Yes");
-                    } else {
-                    	txtrYesNo.setText("No");
-                    }
-                } else if (ammo.getSelectedItem() == ".340 Weatherby Magnum") {
+                if (ammo.getSelectedItem() == ".45-70 Government" || ammo.getSelectedItem() == ".340 Weatherby Magnum" || ammo.getSelectedItem() == ".50 Conical Bullet" || ammo.getSelectedItem() == ".454 Nosler Custom Handgun") {
                     if (animal.getSelectedItem() == "Bison" ||
                         animal.getSelectedItem() == "Black Bear" ||
                         animal.getSelectedItem() == "Brown Bear" ||
@@ -592,22 +576,6 @@ public class MainWindow {
 						animal.getSelectedItem() == "Turkey" || 
 						animal.getSelectedItem() == "White-Tailed Ptarmigan" || 
 						animal.getSelectedItem() == "Willow Ptarmigan") {
-    					txtrYesNo.setText("Yes");
-    				} else {
-    					txtrYesNo.setText("No");
-    				}
-    			} else if (ammo.getSelectedItem() == ".454 Nosler Custom Handgun") {
-    				if (animal.getSelectedItem() == "Bison" || 
-						animal.getSelectedItem() == "Black Bear" || 
-						animal.getSelectedItem() == "Brown Bear" || 
-						animal.getSelectedItem() == "Feral Hog" || 
-						animal.getSelectedItem() == "Grizzly Bear" || 
-						animal.getSelectedItem() == "Moose" || 
-						animal.getSelectedItem() == "Polar Bear" || 
-						animal.getSelectedItem() == "Red Deer" || 
-						animal.getSelectedItem() == "Rocky Mountain Elk" ||  
-						animal.getSelectedItem() == "Roosevelt Elk" || 
-						animal.getSelectedItem() == "Wild Boar") {
     					txtrYesNo.setText("Yes");
     				} else {
     					txtrYesNo.setText("No");
@@ -1189,22 +1157,6 @@ public class MainWindow {
             	} else {
             		txtrYesNo.setText("No");
             	}
-            } else if (ammo.getSelectedItem() == ".50 Conical Bullet") {
-            	if (animal.getSelectedItem() == "Bison" || 
-					animal.getSelectedItem() == "Black Bear" || 
-					animal.getSelectedItem() == "Brown Bear" || 
-					animal.getSelectedItem() == "Feral Hog" || 
-					animal.getSelectedItem() == "Grizzly Bear" || 
-					animal.getSelectedItem() == "Moose" || 
-					animal.getSelectedItem() == "Polar Bear" || 
-					animal.getSelectedItem() == "Red Deer" || 
-					animal.getSelectedItem() == "Rocky Mountain Elk" ||  
-					animal.getSelectedItem() == "Roosevelt Elk" || 
-					animal.getSelectedItem() == "Wild Boar") {
-            		txtrYesNo.setText("Yes");
-            	} else {
-            		txtrYesNo.setText("No");
-            	}
             } else if (ammo.getSelectedItem() == ".50 Patched Round Ball") {
             	if (animal.getSelectedItem() == "Alpine Ibex" || 
 					animal.getSelectedItem() == "Bighorn Sheep" || 
@@ -1314,6 +1266,9 @@ public class MainWindow {
         ammo.add("12 GA Slug");
         ammo.add("12 GA Buckshot");
         ammo.add("12 GA Birdshot");
+        ammo.add("10 GA Birdshot");
+        ammo.add("10 GA Buckshot");
+        ammo.add("10 GA Slug");
         ammo.add("Cable Backed Bow Arrows");
         ammo.add("Longbow Arrows");
         ammo.add("Crossbow Tracer Arrows");
