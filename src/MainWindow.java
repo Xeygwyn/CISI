@@ -57,24 +57,6 @@ public class MainWindow {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.getContentPane().setLayout(null);
 
-        JMenuBar menuBar = new JMenuBar();
-        menuBar.setBorderPainted(false);
-        menuBar.setBounds(0, 0, 48, 23);
-        frame.getContentPane().add(menuBar);
-
-        JMenu mnNewMenu = new JMenu("Menu");
-        mnNewMenu.setHorizontalAlignment(SwingConstants.CENTER);
-        menuBar.add(mnNewMenu);
-
-        JMenuItem MenuAbout = new JMenuItem("About");
-        mnNewMenu.add(MenuAbout);
-
-        JSeparator separator = new JSeparator();
-        mnNewMenu.add(separator);
-
-        JMenuItem MenuVersion = new JMenuItem("Version No.");
-        mnNewMenu.add(MenuVersion);
-
         JSeparator separator_1 = new JSeparator();
         separator_1.setBounds(0, 24, 715, 2);
         frame.getContentPane().add(separator_1);
@@ -528,20 +510,16 @@ public class MainWindow {
                         animal.getSelectedItem() == "Polar Bear" ||
                         animal.getSelectedItem() == "Red Deer" ||
                         animal.getSelectedItem() == "Reindeer" ||
-                        animal.getSelectedItem() == "Rock Ptarmigan" ||
                         animal.getSelectedItem() == "Rocky Mountain Elk" ||
-                        animal.getSelectedItem() == "Roe Deer" ||
                         animal.getSelectedItem() == "Roosevelt Elk" ||
-                        animal.getSelectedItem() == "Sitka Deer" ||
-                        animal.getSelectedItem() == "Snowshoe Hare" ||
-                        animal.getSelectedItem() == "Turkey" ||
-                        animal.getSelectedItem() == "White-Tailed Ptarmigan" ||
-                        animal.getSelectedItem() == "Whitetail Deer" ||
-                        animal.getSelectedItem() == "Wild Boar" ||
-                        animal.getSelectedItem() == "Willow Ptarmigan") {
+                        animal.getSelectedItem() == "Wild Boar") {
                         txtrYesNo.setText("Yes");
+                        Image img = new ImageIcon(this.getClass().getResource("/Cartridges_45_revolver.png")).getImage();
+                        label.setIcon(new ImageIcon(img));
                     } else {
                         txtrYesNo.setText("No");
+                        Image img = new ImageIcon(this.getClass().getResource("/Cartridges_45_revolver.png")).getImage();
+                        label.setIcon(new ImageIcon(img));
                     }
                 } else if (ammo.getSelectedItem() == ".357 Nosler Sporting Handgun") {
                     if (animal.getSelectedItem() == "Alpine Ibex" ||
